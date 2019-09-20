@@ -2,12 +2,6 @@
 Alex Rickels
 Mod 5 Topic 2 - while loop """
 
-# declare a variable sum to store the scores total
-# declare a variable to store the number of items in the list, use len()
-# write a for loop to sum the items in the list
-# declare a variable avg to calculate the average
-# return  # variable avg
-
 
 def average(score_list):
     total_scores = sum(score_list)
@@ -17,4 +11,14 @@ def average(score_list):
 
 
 if __name__ == '__main__':
-    average(list)
+    first_name = input("What is your first name? ")
+    last_name = input("What is your last name? ")
+    scores = []
+    score = 0
+    while score != -1:
+        score = int(input("Please enter a score, type -1 to end: "))
+        if score == -1:
+            break
+        scores.append(score)
+    avg_scores = average(scores)
+    print(last_name, ", ", first_name, " grade: ", str(round(avg_scores)))
