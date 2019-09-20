@@ -1,6 +1,6 @@
 """CIS 189
 Alex Rickels
-Mod 5 Topic 2 - while loop """
+Mod 5 Topic 2 - while loop"""
 
 
 def average(score_list):
@@ -24,4 +24,9 @@ if __name__ == '__main__':
         except ValueError:
             print("Please enter a numerical value")
     avg_scores = average(scores)
-    print(last_name, ", ", first_name, " grade: ", str(round(avg_scores)))
+    print(last_name, ", ", first_name, " grade: ", str(round(avg_scores, 2)))
+
+
+#  tested 0, 70, 80, 90, 100. expected: 80, output: 80
+#  tested 60, alex, 70, 80. expected: 70, output: 70
+#  tested 2, 2, 3. expected: 2.33, output: 2.33
