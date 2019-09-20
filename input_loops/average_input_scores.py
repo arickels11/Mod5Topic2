@@ -16,9 +16,12 @@ if __name__ == '__main__':
     scores = []
     score = 0
     while score != -1:
-        score = int(input("Please enter a score, type -1 to end: "))
-        if score == -1:
-            break
-        scores.append(score)
+        try:
+            score = int(input("Please enter a score, type -1 to end: "))
+            if score == -1:
+                break
+            scores.append(score)
+        except ValueError:
+            print("Please enter a numerical value")
     avg_scores = average(scores)
     print(last_name, ", ", first_name, " grade: ", str(round(avg_scores)))
